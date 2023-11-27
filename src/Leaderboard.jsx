@@ -26,10 +26,6 @@ function Leaderboard() {
         );
     }, [currentUserAdded]);
 
-    // useEffect(() => {
-    //     addCharacters(characters);
-    // }, []);
-
     return (
         <div className='finalPage'>
             <div className='finalPageSection'>
@@ -41,7 +37,8 @@ function Leaderboard() {
                 <div>
                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
                     <button onClick={() => {
-                        addUser({name:name , time: timeForDB}).then(setCurrentUserAdded(true));
+                        addUser({name:name , time: timeForDB})
+                            .then(() => setCurrentUserAdded(prevState => !prevState));
                         setButtonToggle(false);
                      }}>
                         Add to Leaderboard
