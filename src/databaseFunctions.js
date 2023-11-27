@@ -1,7 +1,7 @@
 // Async operations can be handled directly in React components or other JS files
 const getCharacters = async (user) => {
     try {
-        const response = await fetch('character-finder-backend-production.up.railway.app/characters/sendCharacters');
+        const response = await fetch('https://character-finder-backend-production.up.railway.app/characters/sendCharacters');
         const characters = await response.json();
         return characters;
     } catch (error) {
@@ -11,7 +11,7 @@ const getCharacters = async (user) => {
 
 const addUser = async (user) => {
     try {
-        const response = await fetch('character-finder-backend-production.up.railway.app/users/addUser', {
+        const response = await fetch('https://character-finder-backend-production.up.railway.app/users/addUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ const addUser = async (user) => {
 
 const getData = async () => {
     try {
-        const response = await fetch('character-finder-backend-production.up.railway.app/users/sendUsers', {
+        const response = await fetch('https://character-finder-backend-production.up.railway.app/users/sendUsers', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
