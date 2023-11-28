@@ -30,7 +30,7 @@ function Leaderboard() {
         <div className='finalPage'>
             <div className='finalPageSection'>
                 Congradulations! You found all three characters in {hours.basic} hours, {minutes.basic} minutes, and {seconds.basic} seconds.<br />
-                Enter your name to add yourself to the below leaderborad
+                Enter your name to add yourself to the below leaderboard!
             </div>
             <div className='finalPageSection'>
                 {buttonToggle &&
